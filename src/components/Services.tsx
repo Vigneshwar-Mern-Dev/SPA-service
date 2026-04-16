@@ -49,18 +49,18 @@ const servicesList = [
 
 // Array of 12 projects to create exactly 4 rows of 3 cards
 const projectsList = [
-  { id: 1, title: "Steel Bridge Erection", location: "Salem Highway, TN", image: "/project-1.jpg" },
-  { id: 2, title: "Textile Mill Relocation", location: "Erode Industrial Estate", image: "/project-2.jpg" },
-  { id: 3, title: "Metro Pillar Placement", location: "Coimbatore City", image: "/project-3.jpg" },
-  { id: 4, title: "Windmill Turbine Assembly", location: "Tiruppur District", image: "/project-4.jpg" },
-  { id: 5, title: "Precast Concrete Lifting", location: "Salem IT Park", image: "/project-5.jpg" },
-  { id: 6, title: "Boiler Plant Installation", location: "Bhavani, Erode", image: "/project-6.jpg" },
-  { id: 7, title: "Commercial Complex Setup", location: "Salem Center", image: "/project-7.jpg" },
-  { id: 8, title: "Heavy Generator Moving", location: "Perundurai SIPCOT", image: "/project-8.jpg" },
-  { id: 9, title: "Factory Roof Trussing", location: "Namakkal Bypass", image: "/project-9.jpg" },
-  { id: 10, title: "Emergency Accident Recovery", location: "NH-44 Highway", image: "/project-10.jpg" },
-  { id: 11, title: "Water Tank Hoisting", location: "Erode Suburbs", image: "/project-11.jpg" },
-  { id: 12, title: "Railway Track Logistics", location: "Salem Junction", image: "/project-12.jpg" }
+  { id: 1, title: "Spinning mill", location: "Mayapuram", image: "/images/Mayapuram spinning mill.webp" },
+  { id: 2, title: "Boiler water volve erection in dyeing unit", location: "komarapalayam", image: "/images/Boiler water volve erection in dyeing unit at komarapalayam.webp" },
+  { id: 3, title: "Metro Pillar Placement", location: "anthiyur", image: "/images/Container shifting anthiyur.webp" },
+  { id: 4, title: "Boiler dismantle in SSM Mill", location: "komarapalayam", image: "/images/Boiler dismantle in SSM Mill at komarapalayam.webp" },
+  { id: 5, title: "Scrap bus loading at IRTT bus dippo", location: "komarapalayam", image: "/images/Scrap bus loading at IRTT bus dippo.webp" },
+  { id: 6, title: "Sugar factory periyapuliyur", location: "periyapuliyur", image: "/images/Sugar factory periyapuliyur.webp" },
+  { id: 7, title: "Dyeing factory kadaiyampatty", location: "kadaiyampatty", image: "/images/Dyeing factory kadaiyampatty.webp" },
+  { id: 8, title: "Tank erection komarapalayam", location: "komarapalayam", image: "/images/Tank erection komarapalayam.webp" },
+  { id: 9, title: "Transformer erection in sugar factory at periyapuliyur", location: "periyapuliyur", image: "/images/Transformer erection in sugar factory at periyapuliyur.webp" },
+  { id: 10, title: "Bhavani temple... function work", location: "Bhavani", image: "/images/Bhavani temple... function work.webp" },
+  { id: 11, title: "Truss erection in dyeing factory at jambai", location: "jambai", image: "/images/Truss erection in dyeing factory at jambai.webp" },
+  { id: 12, title: "Highway route board work SH 28", location: "SH 28", image: "/images/Highway route board work SH 28.webp" }
 ];
 
 export default function Services() {
@@ -172,18 +172,17 @@ export default function Services() {
               }}
             >
               {/* Image Container with Hover Zoom */}
-              <div style={{ width: "100%", height: "240px", overflow: "hidden", position: "relative", background: "#1e293b" }}>
+              <div style={{ width: "100%", height: "600px", overflow: "hidden", position: "relative", background: "#0f172a" }}>
                 <motion.div
                   variants={{
-                    hover: { scale: 1.08 }
+                    hover: { scale: 1.1 }
                   }}
-                  transition={{ duration: 0.4, ease: "easeOut" }}
+                  transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
                   style={{
                     width: "100%", height: "100%",
-                    /* NOTE: Replace this backgroundImage with actual <img src={project.image} /> or Next.js <Image /> once you have the files */
-                    background: `linear-gradient(45deg, rgba(20,20,20,0.8), rgba(40,40,40,0.2)), url('https://images.unsplash.com/photo-1541888086925-0c13bb104753?q=80&w=600&auto=format&fit=crop')`,
+                    backgroundImage: `linear-gradient(to top, rgba(2, 6, 23, 0.9) 0%, transparent 40%), url('${encodeURI(project.image)}')`,
                     backgroundSize: "cover",
-                    backgroundPosition: "center"
+                    backgroundPosition: "center 20%" // Better for crane shots which are often top-heavy
                   }}
                 />
               </div>

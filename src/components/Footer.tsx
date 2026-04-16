@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 
 export default function Footer() {
   return (
@@ -23,15 +24,17 @@ export default function Footer() {
         
         {/* Column 1: Brand */}
         <div>
-          <div className="orbitron" style={{ 
-            fontSize: "1.8rem", 
-            fontWeight: "800", 
-            color: "var(--primary, #facc15)", 
-            marginBottom: "1rem", 
-            letterSpacing: "1px",
-            textShadow: "0 0 20px rgba(250, 204, 21, 0.2)"
-          }}>
-            SPA CRANES
+          <div style={{ display: "flex", alignItems: "center", gap: "10px", marginBottom: "1rem" }}>
+            <Image src="/logo.png" alt="SPA Cranes Logo" width={50} height={50} style={{ objectFit: "contain" }} />
+            <div className="orbitron" style={{ 
+              fontSize: "1.8rem", 
+              fontWeight: "800", 
+              color: "var(--primary, #facc15)", 
+              letterSpacing: "1px",
+              textShadow: "0 0 20px rgba(250, 204, 21, 0.2)"
+            }}>
+              SPA CRANES
+            </div>
           </div>
           <p style={{ color: "var(--text-muted, #94a3b8)", lineHeight: 1.7, marginBottom: "2rem", fontSize: "0.95rem" }}>
             Premium lifting solutions and specialized crane services led by Arigarasudhan. Excellence across Tamil Nadu.

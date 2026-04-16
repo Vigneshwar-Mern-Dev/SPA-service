@@ -63,18 +63,7 @@ export default function Hero() {
         {/* Subtitle / Location */}
         <motion.p 
           variants={itemVariants}
-          className="orbitron" 
-          style={{ 
-            color: "var(--primary, #facc15)", 
-            fontSize: "0.9rem", 
-            letterSpacing: "3px", 
-            marginBottom: "1.5rem",
-            textTransform: "uppercase",
-            fontWeight: 600,
-            display: "flex",
-            alignItems: "center",
-            gap: "12px"
-          }}
+          className="orbitron hero-subtitle-text" 
         >
           <span style={{ width: "40px", height: "2px", background: "var(--primary, #facc15)", display: "inline-block" }} />
           Serving Tamil Nadu: Erode & Salem
@@ -83,26 +72,10 @@ export default function Hero() {
         {/* Main Title */}
         <motion.h1 
           variants={itemVariants}
-          className="hero-title" 
-          style={{
-            fontSize: "clamp(3rem, 7vw, 6rem)", // Slightly larger clamp for desktop impact
-            fontWeight: 800,
-            lineHeight: 1.05,
-            marginBottom: "1.5rem",
-            background: "linear-gradient(135deg, #f8fafc 0%, #94a3b8 100%)",
-            WebkitBackgroundClip: "text",
-            WebkitTextFillColor: "transparent",
-            letterSpacing: "-1px"
-          }}
+          className="orbitron hero-title-text hero-title" 
         >
           HEAVY LIFTING <br />
-          <span 
-            style={{ 
-              color: "var(--primary, #facc15)", 
-              WebkitTextFillColor: "var(--primary, #facc15)",
-              textShadow: "0 0 40px rgba(250, 204, 21, 0.3)" // Adds a premium subtle glow
-            }}
-          >
+          <span className="hero-glow-text">
             MADE SIMPLE.
           </span>
         </motion.h1>
@@ -110,14 +83,7 @@ export default function Hero() {
         {/* Description */}
         <motion.p 
           variants={itemVariants}
-          className="hero-p" 
-          style={{
-            fontSize: "clamp(1.1rem, 2vw, 1.25rem)", // Responsive text sizing
-            color: "var(--text-muted, #94a3b8)",
-            marginBottom: "3rem",
-            maxWidth: "600px",
-            lineHeight: 1.7
-          }}
+          className="hero-p hero-desc-text" 
         >
           Premium crane services and lifting solutions by Arigarasudhan.
           We bring power, precision, and safety to every project.
@@ -137,18 +103,10 @@ export default function Hero() {
               href="/contact" 
               className="btn-primary hero-btn" 
               style={{
-                background: "var(--primary, #facc15)",
-                color: "#020617",
-                padding: "16px 32px",
-                borderRadius: "8px",
-                fontWeight: 700,
-                fontSize: "1rem",
-                textDecoration: "none",
                 display: "inline-flex",
                 alignItems: "center",
                 justifyContent: "center",
-                boxShadow: "0 4px 20px rgba(250, 204, 21, 0.25)",
-                cursor: "pointer"
+                textDecoration: "none",
               }}
             >
               Get a Quote Today
@@ -156,28 +114,12 @@ export default function Hero() {
           </motion.div>
           
           <motion.div
-            whileHover={{ scale: 1.05, backgroundColor: "rgba(255,255,255,0.05)" }}
+            whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
           >
             <Link
               href="/services"
-              className="hero-btn"
-              style={{
-                background: "transparent", 
-                color: "var(--text-light, #f8fafc)",
-                padding: "16px 32px", 
-                border: "1px solid rgba(255,255,255,0.2)",
-                borderRadius: "8px", 
-                fontWeight: 600, 
-                fontSize: "1rem", 
-                cursor: "pointer",
-                textDecoration: "none",
-                display: "inline-flex",
-                alignItems: "center",
-                justifyContent: "center",
-                backdropFilter: "blur(10px)",
-                transition: "background-color 0.3s ease"
-              }}
+              className="btn-secondary hero-btn"
             >
               Our Services
             </Link>

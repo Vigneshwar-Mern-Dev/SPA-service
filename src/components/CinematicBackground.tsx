@@ -2,10 +2,11 @@
 
 import { motion, AnimatePresence } from "framer-motion";
 import { useState, useEffect } from "react";
+import Image from "next/image";
 
 const images = [
-  "/images/hero1.png",
-  "/images/hero2.png"
+  "/images/hero1.webp",
+  "/images/hero2.webp"
 ];
 
 export default function CinematicBackground() {
@@ -42,19 +43,24 @@ export default function CinematicBackground() {
             height: "100%",
           }}
         >
-          <motion.img
-            src={images[index]}
-            alt="SPA Crane In Action"
-            style={{
-              width: "100%",
-              height: "100%",
-              objectFit: "cover",
-              filter: "brightness(0.6) contrast(1.1)"
-            }}
+          <motion.div
             initial={{ scale: 1 }}
             animate={{ scale: 1.15, x: index % 2 === 0 ? "2%" : "-2%" }}
             transition={{ duration: 10, ease: "linear" }}
-          />
+            style={{ width: "100%", height: "100%", position: "relative" }}
+          >
+            <Image
+              src={images[index]}
+              alt={`SPA Crane In Action - Slide ${index + 1}`}
+              fill
+              priority={index === 0}
+              sizes="100vw"
+              style={{
+                objectFit: "cover",
+                filter: "brightness(0.6) contrast(1.1)"
+              }}
+            />
+          </motion.div>
         </motion.div>
       </AnimatePresence>
 

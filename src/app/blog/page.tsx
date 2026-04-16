@@ -2,33 +2,7 @@
 
 import { motion } from "framer-motion";
 import Link from "next/link";
-
-const blogPosts = [
-  {
-    id: 1,
-    title: "The Future of Heavy Lifting: Automation and AI",
-    category: "Technology",
-    excerpt: "Discover how AI-driven load calculations are revolutionizing site safety and efficiency in crane operations.",
-    date: "May 12, 2026",
-    image: "https://images.unsplash.com/photo-1541888086925-0c13bb104753?q=80&w=800&auto=format&fit=crop"
-  },
-  {
-    id: 2,
-    title: "Safely Navigating Tight Construction Sites",
-    category: "Safety",
-    excerpt: "A guide on selecting the right mobile cranes for urban environments where space is at a premium.",
-    date: "April 28, 2026",
-    image: "https://images.unsplash.com/photo-1510103588494-0683a6888496?q=80&w=800&auto=format&fit=crop"
-  },
-  {
-    id: 3,
-    title: "SPA Cranes: 10 Years of Excellence in Tamil Nadu",
-    category: "Company News",
-    excerpt: "Reflecting on our journey from a single crane to the region's preferred heavy lifting partner.",
-    date: "April 15, 2026",
-    image: "https://images.unsplash.com/photo-1545459720-aac273a27b4d?q=80&w=800&auto=format&fit=crop"
-  }
-];
+import { blogPosts } from "./data";
 
 export default function BlogPage() {
   return (
@@ -92,7 +66,7 @@ export default function BlogPage() {
                 <h3 style={{ fontSize: "1.3rem", color: "#f8fafc", marginBottom: "1rem", lineHeight: 1.4, fontWeight: "600" }}>{post.title}</h3>
                 <p style={{ color: "var(--text-muted, #94a3b8)", fontSize: "0.95rem", lineHeight: 1.6, marginBottom: "2rem" }}>{post.excerpt}</p>
                 <div style={{ marginTop: "auto" }}>
-                  <Link href={`/blog/${post.id}`} style={{ color: "var(--primary, #facc15)", textDecoration: "none", fontWeight: "bold", display: "inline-flex", alignItems: "center", gap: "8px" }}>
+                  <Link href={`/blog/${post.slug}`} style={{ color: "var(--primary, #facc15)", textDecoration: "none", fontWeight: "bold", display: "inline-flex", alignItems: "center", gap: "8px" }}>
                     Read Full Story
                     <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5">
                       <path d="M5 12h14M12 5l7 7-7 7" />
